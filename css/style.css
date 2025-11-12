@@ -1,0 +1,267 @@
+
+:root{
+    --fuente-principal: "Press Start 2P", system-ui;
+    --fuente-secundaria: "Pixelify Sans", sans-serif;
+    --color-fondo : #121212;
+    --color-secundario : #2B2B2B;
+    --color-textoPrincipal :#E0E0E0;
+    --color-resaltar : #00BCD4;
+    --color-hover : #FF4081;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fuente-secundaria);
+    background:   var(--color-fondo);
+    color: var(--color-textoPrincipal);
+}
+/* encaabezado */
+
+header{
+    width: 100%;
+    height: 280px;
+    position: relative;
+    background-image: url(../assets/img/fondoTitulo.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+}
+.PlacaTitulo{
+    width: 100%;
+    line-height: 50px;
+    position: absolute;
+    top: 150px;
+}
+
+.Titulo{
+    font-family: var(--fuente-principal);
+    font-size: 30px;
+    background-color:#ff408023;
+    color: var(--color-resaltar);
+    text-shadow: 0 0 10px var(--color-resaltar), 0 0 30px var(--color-hover);
+    margin: 20px 0 auto;
+    text-align: center;
+}
+
+
+/* configuracion nav */
+nav {
+    width: 100%;
+    background-color: var(--color-secundario);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+    font-family: var(--fuente-secundaria);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+nav * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+
+nav ul {
+    margin: 0;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 1em;
+    padding: 0;
+}
+
+nav a {
+    position: relative;
+    padding: .5em .8em;
+    color: var(--color-textoPrincipal);
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+nav a::before,
+nav a::after {
+    content: '';
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    transition: all .35s ease;
+    opacity: 0;
+}
+
+/* Líneas de las esquinas */
+nav a::before {
+    right: 0;
+    top: 0;
+    border-top: 3px solid var(--color-hover);
+    border-right: 3px solid var(--color-hover);
+    transform: translate(-100%, 50%);
+}
+
+nav a::after {
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid var(--color-resaltar);
+    border-left: 3px solid var(--color-resaltar);
+    transform: translate(100%, -50%);
+}
+
+/* Hover: activa animación */
+nav a:hover::before,
+nav a:hover::after {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+/* Hover: cambia color del texto */
+nav a:hover {
+    color: var(--color-hover);
+    opacity: 1;
+}
+
+/* secciones */
+section{
+    max-width: 90%;
+    margin: 80px auto;
+    padding: 40px;
+    background: var(--color-secundario);
+    border-radius: 10px;
+    border: 2px solid var(--color-hover);
+    box-shadow: 0 0 25px var(--color-hover);
+    transition: all 0.3s ease;
+}
+section:hover {
+    box-shadow: 0 0 35px var(--color-resaltar), 0 0 60px var(--color-hover);
+    transform: scale(1.02);
+}
+
+section h2{
+    font-family: var(--fuente-principal);
+    text-align: center;
+    color: var(--color-resaltar); 
+    padding: 10px 10px;  
+}
+
+
+
+/* footer */
+footer {
+    width: 100%;
+    line-height: 50px;
+    background-color: var(--color-secundario);
+    color: var(--color-textoPrincipal);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer ul {
+    margin: 0;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer li {
+    list-style: none;
+    margin: 0 1em;
+    padding: 0;
+}
+
+footer a {
+    position: relative;
+    padding: 5px 8px;
+    color: var(--color-textoPrincipal);
+    text-decoration: none;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+
+
+/* From Uiverse.io by 0800Gonza */ 
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
+}
+
+/* for all social containers*/
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color:var(--color-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: 1s;
+}
+/* instagram*/
+.containerOne:hover {
+    background-color: var(--color-resaltar);
+    transition-duration: 0.3s;
+}
+/* twitter*/
+.containerTwo:hover {
+    background-color: var(--color-resaltar);
+    transition-duration: 0.3s;
+}
+/* linkdin*/
+.containerThree:hover {
+    background-color: var(--color-resaltar);
+    transition-duration: 0.3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+    background-color: var(--color-resaltar);
+    transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: var(--color-textoPrincipal);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+0% {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
