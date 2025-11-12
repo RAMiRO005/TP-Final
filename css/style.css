@@ -7,12 +7,12 @@
     --color-textoPrincipal :#E0E0E0;
     --color-resaltar : #00BCD4;
     --color-hover : #FF4081;
+    --color-backTitulos : #ff408023;
 
 }
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
 body{
@@ -40,7 +40,7 @@ header{
 .Titulo{
     font-family: var(--fuente-principal);
     font-size: 30px;
-    background-color:#ff408023;
+    background-color:var(--color-backTitulos);
     color: var(--color-resaltar);
     text-shadow: 0 0 10px var(--color-resaltar), 0 0 30px var(--color-hover);
     margin: 20px 0 auto;
@@ -149,18 +149,128 @@ section:hover {
 section h2{
     font-family: var(--fuente-principal);
     text-align: center;
-    color: var(--color-resaltar); 
-    padding: 10px 10px;  
+    color: var(--color-resaltar);
+    padding: 10px 10px;
+}
+section h2:hover{
+    animation: 0.3s glitch;
+
+}
+@keyframes glitch {
+    0%{
+    text-shadow: red -4px 0, cyan 4px 0 ;
+
+    }
+    50%{
+    text-shadow: red 4px 0, cyan -4px 0 ;
+
+    }
+    100%{
+    text-shadow: red -4px 0, cyan 4px 0 ;
+
+    }
+
+}
+/* ORGANIZAACION DENTRO DE LAS SECCIONES */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    grid-template-areas: 
+        "texto texto texto"
+        "imagen1 imagen2 imagen3";
+}
+
+.texto{
+    grid-area: texto;
+}
+.imagen1{
+    grid-area: imagen1;
+}
+.imagen2{
+    grid-area: imagen2;
+}
+.imagen3{
+    grid-area: imagen3;
 }
 
 
+/* Tarjetas de imagenes */
+.tarjeta{
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+
+.tarjeta .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.tarjeta .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0  3px var(--color-hover), 0 0 10px var(--color-resaltar);
+}
+
+.tarjeta .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tarjeta .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: var(--color-textoPrincipal);
+    background: var(--color-backTitulos);
+    text-align: center;
+}
+
+.tarjeta .back{
+    transform: perspective(600px) rotateY(180deg) ;
+    background: var(--color-fondo) ;
+    padding: 15px;
+    color: var(--color-textoPrincipal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0  3px var(--color-hover), 0 0 10px var(--color-resaltar);
+}
+.tarjeta .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    background-color: var(--color-backTitulos);
+}
+.tarjeta .back p{
+    letter-spacing: 1px;
+}
+
+.tarjeta:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.tarjeta:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
 
 /* footer */
 footer {
     width: 100%;
-    line-height: 50px;
+    height: 150px;
     background-color: var(--color-secundario);
     color: var(--color-textoPrincipal);
+    gap: 3px;
+    padding: 5px 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -168,8 +278,8 @@ footer {
     justify-content: center;
 }
 footer ul {
-    margin: 0;
-    padding: 15px 0;
+    margin: 5px 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,22 +287,32 @@ footer ul {
 
 footer li {
     list-style: none;
-    margin: 0 1em;
+    margin: 0 10px;
     padding: 0;
 }
 
-footer a {
+footer a{
     position: relative;
-    padding: 5px 8px;
+    padding: 8px;
     color: var(--color-textoPrincipal);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     opacity: 0.8;
 }
 
+footer h4{
+    margin-top: 5px;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+footer .card{
+    gap: 10px; /* menos separación entre iconos */
+    padding: 5px 0;
+}
 
 
-/* From Uiverse.io by 0800Gonza */ 
+/* From Uiverse.io by 0800Gonza */
 .card {
     width: fit-content;
     height: fit-content;
@@ -200,8 +320,8 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px 25px;
-    gap: 20px;
+    padding: 0px;
+    gap: 10px;
 }
 
 /* for all social containers*/
