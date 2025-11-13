@@ -500,3 +500,209 @@ footer .card{
     opacity: 1;
 }
 }
+
+
+/* ========================= */
+/*   RESPONSIVE 1200px       */
+/* ========================= */
+@media (max-width: 1200px) {
+    .contenedor {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "texto texto"
+        "imagen1 imagen2"
+        "imagen3 imagen3";
+    }
+
+    .tarjeta {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    nav a {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+}
+
+/* ========================= */
+/*   RESPONSIVE 768px        */
+/* ========================= */
+@media (max-width: 768px) {
+
+    /* NAV más compacto */
+    nav ul {
+        flex-wrap: wrap;
+        padding: 10px 0;
+    }
+    nav a {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+header{
+
+    height: 300px;
+
+}
+
+    .Titulo {
+        font-size: 20px;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "texto"
+        "imagen1"
+        "imagen2"
+        "imagen3";
+    }
+
+    .tarjeta {
+        width: 260px;
+        height: 260px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    section h2 {
+        font-size: 20px;
+    }
+}
+
+/* ========================= */
+/*   RESPONSIVE 480px        */
+/* ========================= */
+@media (max-width: 480px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    header{
+    height: 280px;
+
+}
+
+    .Titulo {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    section {
+        margin: 40px auto;
+        padding: 18px;
+    }
+
+    .tarjeta {
+        width: 200px;
+        height: 200px;
+    }
+
+    .tarjeta .front h3,
+    .tarjeta .back h3 {
+        font-size: 0.8rem;
+    }
+
+    form {
+        max-width: 95%;
+    }
+
+    button {
+        width: 110px;
+        height: 42px;
+        font-size: 13px;
+    }
+
+    footer {
+        height: auto;
+        padding: 18px 0;
+        gap: 8px;
+    }
+
+    .socialContainer {
+        width: 38px;
+        height: 38px;
+    }
+
+    footer h4 {
+        font-size: 11px;
+    }
+}
+
+/* ============================= */
+/*       MENÚ HAMBURGUESA       */
+/*       Solo en 480px          */
+/* ============================= */
+
+@media (max-width: 480px) {
+
+    /* Ocultar menú normal */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-secundario);
+        width: 100%;
+        padding: 15px 0;
+        border-top: 2px solid var(--color-hover);
+    }
+
+    /* Mostrar cuando está activo */
+    nav ul.menu-activo {
+        display: flex;
+    }
+
+    /* Botón hamburguesa */
+    .hamburguesa {
+        width: 35px;
+        height: 28px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        margin-left: 15px;
+        z-index: 2000;
+    }
+
+    .hamburguesa span {
+        width: 100%;
+        height: 4px;
+        background: var(--color-textoPrincipal);
+        border-radius: 4px;
+        transition: 0.4s;
+    }
+
+    /* ANIMACIÓN AL ABRIR */
+    .hamburguesa.activo span:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
+    }
+    .hamburguesa.activo span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburguesa.activo span:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+    }
+
+    /* Ajustar enlaces */
+    nav a {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    nav {
+        padding: 10px 0;
+        height: auto;
+    }
+}
+
+
+
