@@ -24,17 +24,19 @@ body{
 
 header{
     width: 100%;
-    height: 350px;
+    height: 450px;
     position: relative;
     background-image: url(../assets/img/fondoTitulo.jpg);
-    background-position: center center;
-    background-attachment: fixed;
+    background-position: center 30%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    
 }
 .PlacaTitulo{
     width: 100%;
     line-height: 50px;
     position: absolute;
-    top: 150px;
+    top: 50%;
 }
 
 .Titulo{
