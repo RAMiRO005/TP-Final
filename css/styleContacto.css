@@ -210,6 +210,16 @@ form textarea:focus {
     box-shadow: 0 0 10px var(--color-resaltar);
 }
 
+/* Mensaje de gracias */
+section .tituloGracias{
+    animation-iteration-count: 25;
+    animation: 0.3s glitch;
+}
+section .Gracias{
+    text-align: center;
+}
+
+
 /* BOTON ENVIAR */
 button {
     width: 150px;
@@ -547,11 +557,3 @@ header{
     }
 }
 
-/* Mensaje de gracias */
-section .tituloGracias{
-    animation-iteration-count: 25;
-    animation: 0.3s glitch;
-}
-section .Gracias{
-    text-align: center;
-}
