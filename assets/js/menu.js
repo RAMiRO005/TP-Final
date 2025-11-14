@@ -1,5 +1,5 @@
 // Selección de elementos
-const btn = document.getElementById("hamburguesa");
+const btn = document.getElementById("burger-checkbox");
 const menu = document.getElementById("menu");
 
 // Evento para abrir/cerrar menú
