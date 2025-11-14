@@ -151,11 +151,10 @@ section h2{
     text-align: center;
     color: var(--color-resaltar);
     padding: 10px 10px;
-}
-section h2:hover{
+    animation-iteration-count: 25;
     animation: 0.3s glitch;
-
 }
+
 @keyframes glitch {
     0%{
     text-shadow: red -4px 0, cyan 4px 0 ;
@@ -184,6 +183,7 @@ form h2 {
     font-size: 40px;
     color: var(--color-resaltar);
     margin-bottom: 40px;
+
 }
 
 form label {
@@ -545,4 +545,13 @@ header{
         padding: 10px 0;
         height: auto;
     }
+}
+
+/* Mensaje de gracias */
+section .tituloGracias{
+    animation-iteration-count: 25;
+    animation: 0.3s glitch;
+}
+section .Gracias{
+    text-align: center;
 }

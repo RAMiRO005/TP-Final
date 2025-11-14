@@ -56,7 +56,6 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
-    text-align: center;
     font-family: var(--fuente-secundaria);
     text-transform: uppercase;
     font-weight: 600;
@@ -151,6 +150,7 @@ section h2{
     text-align: center;
     color: var(--color-resaltar);
     padding: 10px 10px;
+    animation-iteration-count: 25;
 }
 section h2:hover{
     animation: 0.3s glitch;
@@ -171,6 +171,7 @@ section h2:hover{
     }
 
 }
+
 /* ORGANIZAACION DENTRO DE LAS SECCIONES */
 .contenedor {
     display: grid;
