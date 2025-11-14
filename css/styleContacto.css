@@ -24,11 +24,12 @@ body{
 
 header{
     width: 100%;
-    height: 350px;
+    height: 450px;
     position: relative;
     background-image: url(../assets/img/fondoTitulo.jpg);
-    background-position: center center;
-    background-attachment: fixed;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 .PlacaTitulo{
     width: 100%;
@@ -451,14 +452,7 @@ header{
         font-size: 13px;
     }
 
-header{
-    width: 100%;
-    height: 280px;
-    position: relative;
-    background-image: url(../assets/img/fondoTitulo.jpg);
-    background-position: center center;
-    background-attachment: fixed;
-}
+
     .Titulo {
         font-size: 14px;
         line-height: 20px;

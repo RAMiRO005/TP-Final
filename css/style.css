@@ -28,9 +28,8 @@ header{
     position: relative;
     background-image: url(../assets/img/fondoTitulo.jpg);
     background-position: center 30%;
-    background-attachment: scroll;
     background-repeat: no-repeat;
-    
+    background-attachment: scroll;
 }
 .PlacaTitulo{
     width: 100%;
@@ -653,14 +652,6 @@ header{
     footer h4 {
         font-size: 11px;
     }
-}
-
-/* ============================= */
-/*       MENÚ HAMBURGUESA       */
-/*       Solo en 480px          */
-/* ============================= */
-
-@media (max-width: 480px) {
 
     /* Ocultar menú normal */
     nav ul {
