@@ -120,7 +120,7 @@ nav a::after {
 
 /* Hover: activa animación */
 nav a:hover::before,
-nav a:hover::after {
+nav a:hover::after{
     transform: translate(0, 0);
     opacity: 1;
 }
@@ -130,6 +130,10 @@ nav a:hover {
     color: var(--color-hover);
     opacity: 1;
 }
+.fa-chevron-left{
+    font-size: 18px;
+}
+
 
 /* secciones */
 section{
