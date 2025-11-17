@@ -254,7 +254,7 @@ section h2:hover{
 
 /* Título */
 .tarjeta .back h3 {
-    font-size: 1.4rem;
+    font-size: 22px;
     margin-bottom: 10px;
     letter-spacing: 1px;
     background-color: var(--color-backTitulos);
@@ -273,7 +273,7 @@ section h2:hover{
 
 .tarjeta .back p {
     flex: 1;
-    font-size: 0.95rem;
+    font-size: 15px;
     line-height: 1.4;
     letter-spacing: 0.5px;
     margin: 0 5px 10px 5px;
@@ -287,44 +287,6 @@ section h2:hover{
     transform: perspective(600px) rotateY(360deg);
 }
 
-
-/* FORMULARIO DE CONTACTO */
-
-form {
-    max-width: 600px;
-    margin: 10px auto;
-    padding: 20px;
-}
-form h2 {
-    text-align: center;
-    font-size: 40px;
-    color: var(--color-resaltar);
-    margin-bottom: 40px;
-}
-
-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: var(--color-textoPrincipal);
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 2px solid var(--color-resaltar);
-    border-radius: 6px;
-    font-size: 15px;
-}
-
-form input:focus,
-form textarea:focus {
-    outline: none;
-    border-color: var(--color-hover);
-    box-shadow: 0 0 10px var(--color-resaltar);
-}
 
 /* BOTON ENVIAR */
 button {
@@ -619,7 +581,7 @@ header{
 
 .tarjeta .front h3,
 .tarjeta .back h3 {
-    font-size: 0.8rem ;
+    font-size: 12px ;
 }
 
 /* Para evitar que el contenedor colapse al girar */
